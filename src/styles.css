@@ -1,0 +1,373 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  font-family: Sans-serif;
+}
+
+body {
+  /*background-image: url(img/pngtree-abstract-polygonal-space-low-poly-dark-background-with-connecting-dots-and-image_337931.jpg);
+*/
+}
+
+html,
+body {
+  margin: 0 auto;
+}
+.AddUser_form_section {
+  border-radius: 2px;
+  /* height: 51vh;*/
+  background-color: #fff;
+  box-shadow: 0 0 0 0 rgba(34, 36, 38, 1);
+  padding: 10px;
+}
+
+.u-margin-right-small {
+  margin-right: 20px;
+}
+
+.u-margin-right-medium {
+  margin-right: 40px;
+}
+
+.u-margin-top-big {
+  margin-top: 100px;
+}
+
+.u-margin-top-small {
+  margin-top: 30px;
+}
+.u-margin-top-tiny {
+  margin-top: 10px;
+}
+.AddUser_form_row::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.Adduser_form_label {
+  width: 26%;
+  float: left;
+  text-align: right;
+  font-size: 16px;
+  /*color: #212529;*/
+  color: #545454;
+}
+
+.Adduser_form_inputelement {
+  float: left;
+  width: 50%;
+}
+
+.Adduser_form_inputelement::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+.header__client__img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid #bcc2cc;
+  vertical-align: middle;
+}
+.Adduser_form_input {
+  padding: 9px;
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 2px;
+}
+
+.AddUser_form_mark {
+  color: red;
+}
+
+.AddUser_form_submit_container {
+  text-align: center;
+  width: 50%;
+}
+
+.AddUser_form_submit {
+  color: #fff;
+  background: #2185d0;
+  border: none;
+  /*width: 100%;*/
+  border-radius: 2px;
+  padding: 0.78571429em 1.5em 0.78571429em;
+  box-shadow: 0 0 0 0 rgba(34, 36, 38, 0.15);
+  margin-bottom: 20px;
+}
+
+.Adduser_text_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Adduser_text_content_left_para_align {
+  margin-left: 30px;
+}
+
+.Adduser_text_content_right_para_align {
+  margin-right: 30px;
+}
+
+.AddUser_form_section {
+  margin: 100px auto;
+  max-width: 960px;
+}
+
+.header_dropdown_icon_1 {
+  padding-right: 5px;
+}
+label {
+  color: #545454;
+}
+
+.dropdown_icon {
+  padding-right: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.AddUser_form_submit_container_leads {
+  margin: 20px auto;
+}
+
+.row {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.col-1-of-2 {
+  float: left;
+  width: calc((100% - 50px) / 2);
+}
+
+/* .row [class^='col-1-of-2']{
+
+
+
+
+
+} */
+
+.col-1-of-2:not(:last-child) {
+  margin-right: 50px;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.AddUser_form_section_2 {
+  max-width: 100%;
+  border-radius: 2px;
+  /* height: 51vh; */
+  background-color: #fff;
+  box-shadow: 0 0 0 0 rgba(34, 36, 38, 1);
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.Adduser_form_input_2 {
+  padding: 5px;
+}
+
+.select_add {
+  color: #fff;
+  background: #06bcfb;
+  margin-left: 2px;
+  box-sizing: border-box;
+  padding: 4px;
+}
+
+.select_add_calnder {
+  padding: 6px;
+  background: #c5c8cc;
+  color: #fff;
+}
+.heading_primary {
+  text-align: center;
+  color: #545454;
+}
+
+.Addlead_sub {
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+
+.Addlead_button {
+  background: #06bcfb;
+  padding: 8px;
+  color: #fff;
+  border: none;
+  margin-right: 10px;
+}
+
+.Addlead_button__icon {
+  padding-right: 3px;
+}
+/* 
+.addlead_checkbox_container{
+
+
+
+
+} */
+
+.rss_2 {
+  margin-top: 50px;
+}
+
+.rss_2::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.AddUser_form_section_2::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.expand_fields_more_link {
+  background: #06bcfb;
+  border-radius: 4px;
+  padding: 5px;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+}
+.expand_fields_more_link:focus {
+  outline-color: #06bcfb;
+}
+.expand_fields_more {
+  text-align: right;
+  margin-right: 80px;
+  margin-top: 10px;
+}
+
+.form__error {
+  text-align: center;
+  color: red;
+  margin-top: 10px;
+}
+
+.error_border {
+  border: 1px solid red !important;
+}
+
+/*
+.select_2_option__add {
+  width: 92.3%;
+}
+*/
+
+.select_2_option {
+  width: 92.5%;
+}
+
+.row [class^="col-1-of-2"] {
+  margin-bottom: 50px;
+}
+
+.col-1-of-2:not(:last-child) {
+  margin-right: 50px;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"] {
+  float: left;
+  /*background: red;
+              */
+}
+
+.row_follow_up {
+  margin-top: 10px;
+}
+.u-margin-top-medium {
+  margin-top: 50px;
+}
+
+.table {
+  /* border-collapse: collapse; */
+  width: 100%;
+}
+.table_heading_row {
+  background: #212529;
+  color: #fff;
+}
+tr {
+  width: 100%;
+}
+td,
+th {
+  text-align: center;
+  padding: 8px;
+}
+td {
+  border: 1px solid #dddddd;
+}
+.follow_up_pagination {
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+.col-1-of-3 {
+  width: calc((100% - 2 * 10px) / 3);
+}
+
+.col-2-of-3 {
+  width: calc(2 * (100% - 2 * 10px) / 3 + 10px);
+}
+
+.col-2-of-3-custom {
+  width: 40%;
+}
+.col-1-of-2-custom {
+  width: 28.8%;
+  width: 28.8%;
+}
+.col-1-of-3:not(:last-child) {
+  margin-right: 10px;
+}
+
+.col-1-of-2-custom:not(:last-child) {
+  margin-right: 5px;
+  margin-left: 2px;
+}
+
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.row_follow_up {
+  padding-left: 10px;
+}
+
+.wrapper {
+  background-color: #f4f4f4;
+  height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

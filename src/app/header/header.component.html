@@ -1,0 +1,279 @@
+<header class="header">
+  <nav>
+    <div class="header__top">
+      <div class="header__left">
+        <div class="header__logo_box">
+          <img src="../../assets/img/bixita_logo.png" class="header__logo" />
+        </div>
+      </div>
+
+      <div class="header__right_floatclear">
+        <div class="header__right">
+
+
+
+          
+          <!----<ul class="header__right__list">
+     <li class="header__right_items"><i class="fas fa-headset"></i></li>
+    
+        <li class="header__right_items"><a href="" class="link">For Support</a></li>
+         
+         <li class="header__right_items">|</li>
+          <li class="header__right_items">
+        <a href="" class="link"><div><img src="img/ac0d6274a6cea04669e66a20ec0ea204.jpeg" class="header__client__img">
+             </div> </a>
+   </li>
+       
+         
+        <li class="header__right_items"><a href="" class="link">Welcome Kaar</a></li>
+
+    
+ </ul>
+    ------------->
+
+          <a href="" class="link header__right_items"
+            ><i class="fas fa-headset"></i
+          ></a>
+
+          <a href="" class="link header__right_items">Support</a>
+          <a class="link header__right_items">|</a>
+          <a href="" class="link header__right_items"
+            ><img
+              src="../../assets/img/ac0d6274a6cea04669e66a20ec0ea204.jpeg"
+              class="header__client__img"
+            />
+          </a>
+
+          <a href="" class="link header__right_items">Welcome Kaar</a>
+          <a class="link header__right_items">|</a>
+          <div class="dummy">
+            <a href="" class="link header__right_items"
+              ><i class="fas fa-cog header_dropdown_icon_1"></i>&nbsp;</a
+            >
+            &nbsp;
+            <div class="header__dropdown header__dropdown__2">
+              &nbsp;
+              <a href="" class="header__dropdown__options link"></a>
+
+              <a href="" class="header__dropdown__options link"
+                ><i class="fas fa-search-location dropdown_icon"></i>Location</a
+              >
+              <a href="" class="header__dropdown__options link">Catgorey</a>
+              <a href="" class="header__dropdown__options link"
+                >Prduct and services</a
+              >
+              <a href="" class="header__dropdown__options link"
+                >Follow-up status</a
+              >
+              <a href="" class="header__dropdown__options link">Reference</a>
+              <a href="" class="header__dropdown__options link"
+                >Lead Custom Fileds</a
+              >
+              <a href="" class="header__dropdown__options link"
+                >Follow-up Custom Fileds</a
+              >
+
+              <a href="" class="header__dropdown__options link">Remarks</a>
+              <a href="" class="header__dropdown__options link"
+                >Mail Settings</a
+              >
+              <a href="" class="header__dropdown__options link">Sms</a>
+              <a href="" class="header__dropdown__options link"
+                >Template Settings</a
+              >
+              <a href="" class="header__dropdown__options link"
+                >System Settings</a
+              >
+            </div>
+          </div>
+          <!-- <div class="header__dropdown__bttn">
+            <button class="header__dropdown__bttn__element">
+              <i class="fas fa-cog header_dropdown_icon_1"></i>
+              <i class="fas fa-angle-down header_dropdown_icon"></i>
+            </button>
+
+            <div class="header__dropdown">
+              <a href="" class="header__dropdown__options link"></a>
+
+              <a href="" class="header__dropdown__options link"
+                ><i class="fas fa-search-location dropdown_icon"></i>Location</a
+              >
+              <a href="" class="header__dropdown__options link">Catgorey</a>
+              <a href="" class="header__dropdown__options link"
+                >Prduct and services</a
+              >
+              <a href="" class="header__dropdown__options link"
+                >Follow-up status</a
+              >
+              <a href="" class="header__dropdown__options link">Reference</a>
+              <a href="" class="header__dropdown__options link"
+                >Lead Custom Fileds</a
+              >
+              <a href="" class="header__dropdown__options link"
+                >Follow-up Custom Fileds</a
+              >
+
+              <a href="" class="header__dropdown__options link">Remarks</a>
+              <a href="" class="header__dropdown__options link"
+                >Mail Settings</a
+              >
+              <a href="" class="header__dropdown__options link">Sms</a>
+              <a href="" class="header__dropdown__options link"
+                >Template Settings</a
+              >
+              <a href="" class="header__dropdown__options link"
+                >System Settings</a
+              >
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="header__down">
+      <div class="header__down__center_content">
+        <div class="header__dropdown__bttn">
+          <button class="header__dropdown__bttn__element">
+            <i class="fas fa-user-alt header_dropdown_icon_1"></i>Dashboard
+            <i class="fas fa-angle-down header_dropdown_icon"></i>
+          </button>
+
+          <div class="header__dropdown">
+            <a href="" class="header__dropdown__options link"
+              ><i class="fas fa-user-shield dropdown_icon"></i>Admin
+              Dashboard</a
+            >
+
+            <a href="" class="header__dropdown__options link">My Dashboard</a>
+          </div>
+        </div>
+
+        <div class="header__dropdown__bttn">
+          <button class="header__dropdown__bttn__element">
+            <i class="fas fa-rocket header_dropdown_icon_1"></i>Leads
+            <i class="fas fa-angle-down header_dropdown_icon"></i>
+          </button>
+
+          <div class="header__dropdown">
+            <a [routerLink]="'/AddLead'" class="header__dropdown__options link">
+              <i class="fas fa-plus dropdown_icon"></i>Quick Add</a
+            >
+
+            <a [routerLink]="'/UserForm'" class="header__dropdown__options link"
+              >Add New</a
+            >
+            <a
+              [routerLink]="'/LeadlistComponent'"
+              class="header__dropdown__options link"
+              >Lead List</a
+            >
+          </div>
+        </div>
+
+        <div class="header__dropdown__bttn">
+          <button
+            class="header__dropdown__bttn__element"
+            [routerLink]="'/FollowuplistComponent'"
+          >
+            <i class="far fa-gem header_dropdown_icon_1"></i>Follow Up
+          </button>
+        </div>
+
+        <div class="header__dropdown__bttn">
+          <button class="header__dropdown__bttn__element">
+            <i class="fas fa-quote-right header_dropdown_icon_1"></i>Quote
+          </button>
+        </div>
+
+        <div class="header__dropdown__bttn">
+          <button class="header__dropdown__bttn__element">
+            <i class="fas fa-balance-scale header_dropdown_icon_1"></i>Utilites
+            <i class="fas fa-angle-down header_dropdown_icon"></i>
+          </button>
+
+          <div class="header__dropdown">
+            <a href="" class="header__dropdown__options link"></a>
+
+            <a href="" class="header__dropdown__options link"
+              ><i class="fas fa-file-import dropdown_icon"></i>Import Follow
+              Up</a
+            >
+            <a href="" class="header__dropdown__options link"
+              >Export Contacts</a
+            >
+            <a href="" class="header__dropdown__options link">Copy Follow-Up</a>
+            <a href="" class="header__dropdown__options link">Move Follow Up</a>
+            <a href="" class="header__dropdown__options link">Exports Leads</a>
+            <a href="" class="header__dropdown__options link"
+              >Duplicate Leads</a
+            >
+            <a href="" class="header__dropdown__options link"
+              >Duplicate Follow Up</a
+            >
+          </div>
+        </div>
+
+        <!-- <div class="header__dropdown__bttn">
+          <button class="header__dropdown__bttn__element">
+            <i class="fas fa-cog header_dropdown_icon_1"></i>Settings
+            <i class="fas fa-angle-down header_dropdown_icon"></i>
+          </button>
+
+          <div class="header__dropdown">
+            <a href="" class="header__dropdown__options link"></a>
+
+            <a href="" class="header__dropdown__options link"
+              ><i class="fas fa-search-location dropdown_icon"></i>Location</a
+            >
+            <a href="" class="header__dropdown__options link">Catgorey</a>
+            <a href="" class="header__dropdown__options link"
+              >Prduct and services</a
+            >
+            <a href="" class="header__dropdown__options link"
+              >Follow-up status</a
+            >
+            <a href="" class="header__dropdown__options link">Reference</a>
+            <a href="" class="header__dropdown__options link"
+              >Lead Custom Fileds</a
+            >
+            <a href="" class="header__dropdown__options link"
+              >Follow-up Custom Fileds</a
+            >
+
+            <a href="" class="header__dropdown__options link">Remarks</a>
+            <a href="" class="header__dropdown__options link">Mail Settings</a>
+            <a href="" class="header__dropdown__options link">Sms</a>
+            <a href="" class="header__dropdown__options link"
+              >Template Settings</a
+            >
+            <a href="" class="header__dropdown__options link"
+              >System Settings</a
+            >
+          </div>
+        </div> -->
+
+        <div class="header__dropdown__bttn">
+          <button class="header__dropdown__bttn__element">
+            <i class="fas fa-chart-pie header_dropdown_icon_1"></i>Reports
+            <i class="fas fa-angle-down header_dropdown_icon"></i>
+          </button>
+
+          <div class="header__dropdown">
+            <a href="" class="header__dropdown__options link"></a>
+
+            <a href="" class="header__dropdown__options link">Leads Report</a>
+            <a href="" class="header__dropdown__options link"
+              >Follow-up Report</a
+            >
+            <a href="" class="header__dropdown__options link"
+              >Leads/Follow-up Report</a
+            >
+            <a href="" class="header__dropdown__options link"
+              >Sales Trend Report</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

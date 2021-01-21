@@ -1,0 +1,126 @@
+.u-margin-top-small {
+  margin-top: 20px;
+}
+
+.u-margin-top-tiny {
+  margin-top: 10px;
+}
+
+.u-margin-top-medium {
+  margin-top: 50px;
+}
+
+.u-margin-top-huge {
+  margin-top: 150px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #fff !important;
+}
+
+.login__left {
+  float: left;
+  width: 60%;
+  height: 100vh;
+}
+
+.login__right {
+  /*background: green;*/
+  float: left;
+  width: 40%;
+}
+
+.login-cont {
+  margin-top: 0px;
+}
+
+.login__right__form {
+  text-align: center;
+}
+.login__right__form__input {
+  padding: 5px;
+  width: 75%;
+  border: 1px solid #d2e0d8;
+  padding: 10px;
+  /* border-top: none;
+  border-left: none;
+  border-right: none; */
+}
+.login__right__form__label__ele {
+  font-size: 20px;
+}
+
+.login__right__form__input__element {
+  max-width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: skyblue;
+}
+
+.login__right__form__bttn {
+  border: none;
+  padding: 6px;
+  width: 75%;
+  background-color: #06bcfb;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.logo {
+  width: 50%;
+}
+a {
+  text-decoration: underline;
+  color: #06bcfb;
+}
+
+.login__left {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("../../assets/img/img4.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.login__right__form__logo__img {
+  height: 90px;
+}
+
+.login__right__form__error {
+  margin-bottom: 30px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  max-width: 65%;
+  margin: 0 auto;
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+
+.login__right__form__container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.login__right__form__bot {
+  max-width: 75%;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+
+.Input__Form__remberme {
+  padding: 1px;
+}

@@ -1,0 +1,590 @@
+<app-header></app-header>
+<div class="wrapper">
+  &nbsp;
+
+  <section class="AddUser_form_section_2">
+    <h1 class="heading_primary">Leads-Add/Edit</h1>
+    <form
+      class="LeadsForm"
+      #LeadForm="ngForm"
+      (ngSubmit)="LeadFormSubmit(LeadForm)"
+    >
+      <div class="addlead_checkbox_container">
+        <input
+          type="radio"
+          class="addlead_checkboxtop"
+          id="newlead"
+          name="lead"
+        />
+        <label for="newlead">new lead</label>
+        <input
+          type="radio"
+          class="addlead_checkboxtop"
+          id="exisitinglead"
+          name="lead"
+        />
+        <label for="exisitinglead">existinglead</label>
+      </div>
+      <div class="rss_2">
+        <div class="row">
+          <div class="col-1-of-2">
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Mobile<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <input
+                  type="text"
+                  name="LeadNumber"
+                  class="Adduser_form_input Adduser_form_input_2"
+                  placeholder="Enter The Mobile Number"
+                  ngModel
+                  #LeadNumber="ngModel"
+                  required
+                  [ngClass]="{
+                    ' error_border':
+                      (!LeadNumber.valid && LeadNumber.touched) ||
+                      (LeadForm.submitted && !LeadNumber.valid) ||
+                      usermobilespecialbool ||
+                      usermobilelenbool
+                  }"
+                />
+              </div>
+            </div>
+            <div
+              class="form__error"
+              *ngIf="
+                (!LeadNumber.valid && LeadNumber.touched) ||
+                (LeadForm.submitted && !LeadNumber.valid)
+              "
+            >
+              Pls specific the mobile number
+            </div>
+
+            <div class="form__error" *ngIf="usermobilespecialbool">
+              Special chacters are not allowed
+            </div>
+
+            <div class="form__error" *ngIf="usermobilelenbool">
+              length should be gerater than 9
+            </div>
+
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Email id<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <input
+                  type="text"
+                  name="email"
+                  class="Adduser_form_input Adduser_form_input_2"
+                  placeholder="Enter The Email"
+                  required
+                  ngModel
+                  #LeadEmail="ngModel"
+                  email
+                  [ngClass]="{
+                    ' error_border':
+                      (!LeadEmail.valid && LeadEmail.touched) ||
+                      (LeadForm.submitted && !LeadEmail.valid)
+                  }"
+                />
+              </div>
+            </div>
+            <div
+              class="form__error"
+              *ngIf="
+                (!LeadEmail.valid && LeadEmail.touched) ||
+                (LeadForm.submitted && !LeadEmail.valid)
+              "
+            >
+              Pls specific the Email
+            </div>
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Name<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <input
+                  type="text"
+                  name="LeadName"
+                  class="Adduser_form_input Adduser_form_input_2"
+                  placeholder="Enter The Lead Number"
+                  ngModel
+                  #LeadName="ngModel"
+                  required
+                  [ngClass]="{
+                    ' error_border':
+                      (!LeadName.valid && LeadName.touched) ||
+                      (LeadForm.submitted && !LeadName.valid)
+                  }"
+                />
+              </div>
+            </div>
+            <div
+              class="form__error"
+              *ngIf="
+                (!LeadName.valid && LeadName.touched) ||
+                (LeadForm.submitted && !LeadName.valid)
+              "
+            >
+              Pls specific the Name
+            </div>
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Assigned To<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <!-------<input type="text" name="UserName" class="Adduser_form_input" placeholder="Enter The Mobile Number">--->
+
+                <select
+                  class="Adduser_form_input Adduser_form_input_2"
+                  name="AssignedTo"
+                  ngModel
+                  #LeadAssignedTo="ngModel"
+                  required
+                  [ngClass]="{
+                    ' error_border':
+                      (!LeadAssignedTo.valid && LeadAssignedTo.touched) ||
+                      (LeadForm.submitted && !LeadAssignedTo.valid)
+                  }"
+                >
+                  <option></option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+            </div>
+
+            <div
+              class="form__error"
+              *ngIf="
+                (!LeadAssignedTo.valid && LeadAssignedTo.touched) ||
+                (LeadForm.submitted && !LeadAssignedTo.valid)
+              "
+            >
+              Pls specific the Assigned To
+            </div>
+
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Follow Up Status<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <!-------<input type="text" name="UserName" class="Adduser_form_input" placeholder="Enter The Mobile Number">--->
+
+                <select
+                  class="Adduser_form_input Adduser_form_input_2 select_2_option select_2_option__add"
+                  id="followup"
+                  name="FollowUp"
+                  ngModel
+                  #LeadFollowUp="ngModel"
+                  required
+                  [ngClass]="{
+                    ' error_border':
+                      (!LeadFollowUp.valid && LeadFollowUp.touched) ||
+                      (LeadForm.submitted && !LeadFollowUp.valid)
+                  }"
+                >
+                  <option></option>
+                  <option>lead won</option>
+                  <option>lead in-progress</option>
+                  <option>lead lost</option>
+                  <option>lead future</option>
+                </select>
+
+                <span
+                  class="select_add"
+                  for="followup"
+                  (click)="AddMore(AddFollowUpStatus)"
+                  #AddFollowUpStatus
+                  ><i class="fas fa-plus"></i
+                ></span>
+
+                <div class="Add_follow_up_status u-margin-top-small">
+                  <input
+                    type="text"
+                    name="Add Follow_up"
+                    class="Adduser_form_input Adduser_form_input_2"
+                    placeholder="Add Follow up"
+                    ngModel
+                    #AddFollowUp="ngModel"
+                    required
+                    [ngClass]="{
+                      ' error_border': AddFollowUp.touched && !AddFollowUp.valid
+                    }"
+                  />
+                </div>
+                <div
+                  class="form__error"
+                  *ngIf="AddFollowUp.touched && !AddFollowUp.valid"
+                >
+                  Pls specific the Add Follow up
+                </div>
+              </div>
+            </div>
+            <div
+              class="form__error"
+              *ngIf="
+                (!LeadFollowUp.valid && LeadFollowUp.touched) ||
+                (LeadForm.submitted && !LeadFollowUp.valid)
+              "
+            >
+              Pls specific the FollowUp
+            </div>
+          </div>
+
+          <div class="col-1-of-2">
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Location<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <!-------<input type="text" name="UserName" class="Adduser_form_input" placeholder="Enter The Mobile Number">--->
+
+                <select
+                  class="Adduser_form_input Adduser_form_input_2 select_2_option"
+                  name="Location"
+                  ngModel
+                  #LeadLoaction="ngModel"
+                  required
+                  [ngClass]="{
+                    ' error_border':
+                      (!LeadLoaction.valid && LeadLoaction.touched) ||
+                      (LeadForm.submitted && !LeadLoaction.valid)
+                  }"
+                >
+                  <option>Chennai</option>
+                  <option>Out of Chennai</option>
+                </select>
+
+                <span
+                  class="select_add"
+                  (click)="AddMore(AddLocation)"
+                  #AddLocation
+                  ><i class="fas fa-plus"></i
+                ></span>
+
+                <div class="Add_follow_up_status u-margin-top-small">
+                  <input
+                    type="text"
+                    class="Adduser_form_input Adduser_form_input_2"
+                    name="Addlocation"
+                    placeholder="Add Location"
+                    ngModel
+                    #Addlocation="ngModel"
+                    required
+                    [ngClass]="{
+                      ' error_border': Addlocation.touched && !Addlocation.valid
+                    }"
+                  />
+                </div>
+                <div
+                  class="form__error"
+                  *ngIf="Addlocation.touched && !Addlocation.valid"
+                >
+                  Pls specific the addlocation
+                </div>
+              </div>
+            </div>
+            <div
+              class="form__error"
+              *ngIf="
+                (!LeadLoaction.valid && LeadLoaction.touched) ||
+                (LeadForm.submitted && !LeadLoaction.valid)
+              "
+            >
+              Pls specific the Location
+            </div>
+
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Product/Service<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <!----<input type="text" name="UserName" class="Adduser_form_input  Adduser_form_input_2 select_2_option" placeholder="select the product">------>
+
+                <select
+                  class="Adduser_form_input Adduser_form_input_2 select_2_option"
+                  name="Product/Service"
+                  ngModel
+                  required
+                  #LeadProduct="ngModel"
+                  [ngClass]="{
+                    ' error_border':
+                      (!LeadProduct.valid && LeadProduct.touched) ||
+                      (LeadForm.submitted && !LeadProduct.valid)
+                  }"
+                >
+                  <option>Python</option>
+                  <option>JS</option>
+                </select>
+
+                <span
+                  class="select_add"
+                  (click)="AddMore(AddProduct)"
+                  #AddProduct
+                  ><i class="fas fa-plus"></i
+                ></span>
+
+                <div class="Add_follow_up_status u-margin-top-small">
+                  <input
+                    type="text"
+                    class="Adduser_form_input Adduser_form_input_2"
+                    placeholder="Add Product/Service"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="form__error"
+              *ngIf="
+                (!LeadProduct.valid && LeadProduct.touched) ||
+                (LeadForm.submitted && !LeadProduct.valid)
+              "
+            >
+              Pls specific the Product/Service
+            </div>
+
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Next Due On<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <input
+                  type="date"
+                  name="Due"
+                  class="Adduser_form_input Adduser_form_input_2"
+                  placeholder="select the product"
+                  ngModel
+                  #LeadDue="ngModel"
+                  required
+                  [ngClass]="{
+                    ' error_border':
+                      (!LeadDue.valid && LeadDue.touched) ||
+                      (LeadForm.submitted && !LeadDue.valid)
+                  }"
+                />
+              </div>
+            </div>
+
+            <div
+              class="form__error"
+              *ngIf="
+                (!LeadDue.valid && LeadDue.touched) ||
+                (LeadForm.submitted && !LeadDue.valid)
+              "
+            >
+              Pls specific the Due
+            </div>
+
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Followup Remarks
+                <span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <!---- <input type="date" name="UserName" class="Adduser_form_input  Adduser_form_input_2 select_2_option" placeholder="select the product">--->
+                <textarea
+                  class="Adduser_form_input Adduser_form_input_2"
+                  placeholder="Follow up Remarks"
+                  name="Followup Remarks"
+                  ngModel
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rss_2 toggle" *ngIf="showmorebool">
+        &nbsp;
+        <div class="row">
+          <div class="col-1-of-2">
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Website<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <input
+                  type="text"
+                  name="LeadWebsite"
+                  class="Adduser_form_input Adduser_form_input_2"
+                  placeholder="Enter The Website Name"
+                  ngModel
+                  #LeadWebsite="ngModel"
+                />
+              </div>
+            </div>
+
+            <div
+              class="form__error"
+              *ngIf="
+                (!LeadWebsite.valid && LeadWebsite.touched) ||
+                (LeadForm.submitted && !LeadWebsite.valid)
+              "
+            >
+              Pls specific the Website
+            </div>
+
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Referance<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <!----<input type="text" name="UserName" class="Adduser_form_input  Adduser_form_input_2 select_2_option" placeholder="select the product">------>
+
+                <select
+                  class="Adduser_form_input Adduser_form_input_2 select_2_option select_2_option__add"
+                  name="Referance"
+                  ngModel
+                >
+                  <option>Python</option>
+                  <option>JS</option>
+                </select>
+
+                <span
+                  class="select_add"
+                  (click)="AddMore(AddReferance)"
+                  #AddReferance
+                  ><i class="fas fa-plus"></i
+                ></span>
+
+                <div class="Add_follow_up_status u-margin-top-small">
+                  <input
+                    type="text"
+                    class="Adduser_form_input Adduser_form_input_2"
+                    placeholder="Add Referance"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Apporx Value In Inr<span class="AddUser_form_mark"
+                  >*</span
+                ></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <input
+                  type="text"
+                  name="Apporx Value"
+                  class="Adduser_form_input Adduser_form_input_2"
+                  placeholder="Only numbers"
+                  ngModel
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Catgory<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <!----<input type="text" name="UserName" class="Adduser_form_input  Adduser_form_input_2 select_2_option" placeholder="select the product">------>
+
+                <select
+                  class="Adduser_form_input Adduser_form_input_2 select_2_option"
+                  name="Catgory"
+                  ngModel
+                >
+                  <option>Python</option>
+                  <option>JS</option>
+                </select>
+
+                <span
+                  class="select_add"
+                  (click)="AddMore(AddCatogery)"
+                  #AddCatogery
+                  ><i class="fas fa-plus"></i
+                ></span>
+
+                <div class="Add_follow_up_status u-margin-top-small">
+                  <input
+                    type="text"
+                    class="Adduser_form_input Adduser_form_input_2"
+                    placeholder="Add Catgory"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >% Of Posbilities<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <input
+                  type="text"
+                  name="Posbilities"
+                  class="Adduser_form_input Adduser_form_input_2"
+                  placeholder="Only numbers"
+                  ngModel
+                />
+              </div>
+            </div>
+
+            <div class="AddUser_form_row u-margin-top-small">
+              <label class="Adduser_form_label u-margin-right-small"
+                >Address<span class="AddUser_form_mark">*</span></label
+              >
+
+              <div class="Adduser_form_inputelement">
+                <!---- <input type="date" name="UserName" class="Adduser_form_input  Adduser_form_input_2 select_2_option" placeholder="select the product">--->
+                <textarea
+                  class="Adduser_form_input Adduser_form_input_2"
+                  placeholder="Add address"
+                  name="Address"
+                  ngModel
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="expand_fields_more">
+        <button
+          type="button"
+          class="link expand_fields_more_link"
+          (click)="ShowMore()"
+        >
+          Show
+          <span *ngIf="showmorebool; else showmoretexttempalte">{{
+            showmoretext
+          }}</span>
+          Fields
+        </button>
+        <ng-template #showmoretexttempalte>More</ng-template>
+      </div>
+
+      <div class="Addlead_sub">
+        <button type="submit" class="Addlead_button">
+          <i class="fas fa-check-circle Addlead_button__icon"></i>Submit
+        </button>
+        <button type="button" class="Addlead_button">
+          <i class="fas fa-times-circle Addlead_button__icon"></i>Cancel
+        </button>
+      </div>
+    </form>
+  </section>
+</div>

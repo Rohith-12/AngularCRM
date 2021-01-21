@@ -1,0 +1,139 @@
+<app-header></app-header>
+<div class="wrapper">
+  &nbsp;
+  <section class="u-margin-top-big AddUser_form_section">
+    <form
+      class="Cilent__form"
+      #CilentForm="ngForm"
+      (ngSubmit)="ClientFormfun(CilentForm)"
+    >
+      <div class="AddUser_form_row u-margin-top-small">
+        <label class="Adduser_form_label u-margin-right-small"
+          >Cilent/Company<span class="AddUser_form_mark">*</span></label
+        >
+
+        <div class="Adduser_form_inputelement">
+          <input
+            type="text"
+            name="CilentName"
+            class="Adduser_form_input"
+            placeholder="Enter The FullName"
+            required
+            ngModel
+            #CilentName="ngModel"
+            [ngClass]="{
+              error_border:
+                (!CilentName.valid && CilentName.touched) ||
+                (CilentForm.submitted && !CilentForm.valid && !CilentName.valid)
+            }"
+          />
+        </div>
+      </div>
+      <div
+        class="form__error"
+        *ngIf="
+          (!CilentName.valid && CilentName.touched) ||
+          (CilentForm.submitted && !CilentForm.valid && !CilentName.valid)
+        "
+      >
+        Pls specific the CilentName
+      </div>
+      <div class="AddUser_form_row u-margin-top-small">
+        <label class="Adduser_form_label u-margin-right-small"
+          >Mobile<span class="AddUser_form_mark">*</span></label
+        >
+
+        <div class="Adduser_form_inputelement">
+          <input
+            type="text"
+            name="mobile"
+            class="Adduser_form_input"
+            placeholder="Enter The Mobile Number"
+            ngModel
+            #CilentMobile="ngModel"
+            required
+            [ngClass]="{
+              error_border:
+                (!CilentMobile.valid && CilentMobile.touched) ||
+                (CilentForm.submitted && !CilentMobile.valid) ||
+                Mobilenumbool ||
+                Mobilenumlenbool
+            }"
+          />
+        </div>
+      </div>
+      <div
+        class="form__error"
+        *ngIf="
+          (!CilentMobile.valid && CilentMobile.touched) ||
+          (CilentForm.submitted && !CilentMobile.valid)
+        "
+      >
+        Pls specific the mobile number
+      </div>
+      <div class="form__error" *ngIf="Mobilenumbool">
+        special chacters are not allowed
+      </div>
+
+      <div class="form__error" *ngIf="Mobilenumlenbool">
+        should contain gertare than 9
+      </div>
+      <div class="AddUser_form_row u-margin-top-small">
+        <label class="Adduser_form_label u-margin-right-small"
+          >Email id<span class="AddUser_form_mark">*</span></label
+        >
+
+        <div class="Adduser_form_inputelement">
+          <input
+            type="text"
+            name="email"
+            class="Adduser_form_input"
+            placeholder="Enter The Email"
+            ngModel
+            #email="ngModel"
+            required
+            email
+            [ngClass]="{
+              error_border:
+                (!email.valid && email.touched) ||
+                (CilentForm.submitted && !email.valid)
+            }"
+          />
+        </div>
+      </div>
+      <div
+        class="form__error"
+        *ngIf="
+          (!email.valid && email.touched) ||
+          (CilentForm.submitted && !email.valid)
+        "
+      >
+        Pls specific the email
+      </div>
+
+      <!-- <div class="form__error" *ngIf="emailerr">
+      enter email correctly
+    </div> -->
+      <div class="AddUser_form_row u-margin-top-small">
+        <label class="Adduser_form_label u-margin-right-small"
+          >Lead/Custom Remarks<span class="AddUser_form_mark">*</span></label
+        >
+
+        <div class="Adduser_form_inputelement">
+          <textarea
+            class="Adduser_form_input"
+            placeholder="Enter The Remarks"
+          ></textarea>
+        </div>
+      </div>
+
+      <div
+        class="AddUser_form_submit_container AddUser_form_submit_container_leads"
+      >
+        <button class="AddUser_form_submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </section>
+
+  <p>ffsf</p>
+</div>

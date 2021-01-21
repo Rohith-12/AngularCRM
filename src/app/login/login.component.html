@@ -1,0 +1,99 @@
+<div class="login-cont">
+  <div class="login__left">&nbsp;</div>
+
+  <div class="login__right u-margin-top-medium">
+    &nbsp;
+
+    <div class="login__right__form__container">
+      <div class="login__right__form u-margin-top-tiny">
+        <div class="login__right__form__logo">
+          <img
+            src="../../assets/img/logo (1).png"
+            class="login__right__form__logo__img"
+          />
+        </div>
+      </div>
+      <form #Form="ngForm" (ngSubmit)="Login(Form)">
+        <div class="login__right__form u-margin-top-small">
+          <!---<div class="login__right__form__label">
+                
+                 <label for="Name" class="login__right__form__label__ele">Name:</label>
+                
+            </div>---->
+
+          <div
+            class="login__right__form__error"
+            *ngIf="!UserName.valid && Form.submitted"
+          >
+            <div>Please enter User Name !!</div>
+          </div>
+
+          <div
+            class="login__right__form__error"
+            *ngIf="!Password.valid && Form.submitted"
+          >
+            <div>Please enter Password !!</div>
+          </div>
+
+          <div class="login__right__form__input__element">
+            <input
+              type="text"
+              name="UserName"
+              class="login__right__form__input"
+              id="Name"
+              placeholder="UserName"
+              ngModel
+              #UserName="ngModel"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="login__right__form u-margin-top-tiny">
+          <!---<div class="login__right__form__label">
+                
+                 <label for="Name" class="login__right__form__label__ele">Password:</label>
+                
+            </div>------->
+          &nbsp;
+
+          <div class="login__right__form__input__element">
+            <input
+              type="password"
+              name="Password"
+              class="login__right__form__input"
+              id="Name"
+              placeholder="Password"
+              ngModel
+              #Password="ngModel"
+              required
+            />
+          </div>
+          <div class="login__right__form__bot u-margin-top-small">
+            <div class="login__right__form__remberme">
+              <input
+                type="checkbox"
+                id="remberme"
+                class="Input__Form__remberme"
+              /><label for="remberme">Remember Me</label>
+            </div>
+
+            <div class="login__right__form__forgot__password">
+              <a href="#">Forgot password ?</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="login__right__form u-margin-top-medium">
+          <button
+            type="submit"
+            class="login__right__form__bttn"
+            (click)="LoginToCrm(Form)"
+          >
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+.header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  width: 100%;
+}
+
+.header__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo__img {
+  height: 60px;
+}
+.gobal__para {
+  font-size: 16px;
+}
+.header__link {
+  text-decoration: none;
+  color: skyblue;
+}
+
+.SignUp__form__main {
+  margin-top: 20px;
+}
+
+.SignUp__form__container {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.SignUp__form__input__block {
+  max-width: 100%;
+  margin-top: 17px;
+}
+
+.SignUp__form__input {
+  width: 80%;
+  padding: 9px;
+  border: 1px solid #d2e0d8;
+  border-radius: 2px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid skyblue;
+}
+
+.SignUp__form__submit__bttn {
+  width: 80%;
+  background: #16a358;
+  color: #fff;
+  border: none;
+  padding: 9px;
+}
+.header__indicator {
+  margin-right: 10px;
+}
+input {
+  box-sizing: border-box;
+}
+
+select:focus {
+  outline: none;
+  border: 1px solid skyblue;
+}
+
+.SignUp__form__primary_heading {
+  font-size: 18px;
+}
+
+.header__font {
+  font-size: 15px;
+}

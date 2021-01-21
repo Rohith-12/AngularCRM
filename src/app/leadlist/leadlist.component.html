@@ -1,0 +1,335 @@
+<app-header></app-header>
+<div class="wrapper">
+  <div class="backdrop" *ngIf="backdropbool">
+    <div class="followup__backdrop">
+      <div class="followup__backdrop__close" (click)="BackDropFunctionClose()">
+        <i class="fas fa-times-circle"></i>
+      </div>
+      <div class="u-margin-top-medium">
+        <div class="row">
+          <div class="col-1-of-2-new">
+            <div class="lead_name">
+              <h3 class="heading__lead">{{ getleads[2] }}</h3>
+
+              <div class="lead__contact">
+                <a href="#"
+                  ><i
+                    class="fab fa-whatsapp lead_contact_icon lead_contact_icon_1"
+                  ></i
+                ></a>
+                <a href="#"
+                  ><i
+                    class="fas fa-phone-alt lead_contact_icon lead_contact_icon_2"
+                  ></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="follow__up_details">
+              <div class="dd">
+                <div class="flex-container">
+                  <div class="one"><i class="fab fa-whatsapp"></i></div>
+                  <div class="two">Mobile:</div>
+                  <div class="three">{{ getleads[3] }}</div>
+                </div>
+              </div>
+              <div class="dd">
+                <div class="flex-container">
+                  <div class="one"><i class="fas fa-phone-alt"></i></div>
+                  <div class="two">Email Id:</div>
+                  <div class="three">{{ getleads[4] }}</div>
+                </div>
+              </div>
+
+              <div class="dd">
+                <div class="flex-container">
+                  <div class="one"><i class="fas fa-globe"></i></div>
+                  <div class="two">Website:</div>
+                  <div class="three">https://www.lipsum.com/</div>
+                </div>
+              </div>
+
+              <div class="dd">
+                <div class="flex-container">
+                  <div class="one"><i class="fas fa-map-marker-alt"></i></div>
+                  <div class="two">Location:</div>
+                  <div class="three">{{ getleads[5] }}</div>
+                </div>
+              </div>
+
+              <div class="dd">
+                <div class="flex-container">
+                  <div class="one"><i class="fas fa-location-arrow"></i></div>
+                  <div class="two">Address:</div>
+                  <div class="three">{{ getleads[5] }}</div>
+                </div>
+              </div>
+
+              <div class="dd">
+                <div class="flex-container">
+                  <div class="one"><i class="fas fa-star"></i></div>
+                  <div class="two">Remarks:</div>
+                  <div class="three">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-of-2_new">
+            <!-- <h5>Time taken 7:42:12</h5> -->
+
+            <h3 class="heading__lead follow_up_left">Follow Up</h3>
+
+            <div class="follow_up_container">
+              <a href="" class="link header__right_items"
+                ><img
+                  src="../../assets/img/ac0d6274a6cea04669e66a20ec0ea204.jpeg"
+                  class="header__client__img"
+                />
+              </a>
+
+              <a href="" class="link header__right_items">{{ getleads[2] }}</a>
+            </div>
+
+            <div class="follow_new_leads_link">
+              <a href="" class="link header__right_items">New Leads</a>
+            </div>
+
+            <div class="follow_up_product">
+              <h3>Product and service on python</h3>
+              <div class="follow_up_product__listing">
+                <span>
+                  <i class="fas fa-calendar-week"></i>
+                </span>
+
+                <span class="follow_up_text">Next due on March 31</span>
+              </div>
+
+              <div class="follow_up_product__listing">
+                <span>
+                  <i class="fas fa-calendar-week"></i>
+                </span>
+
+                <span class="follow_up_text">Created on March 31</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="u-margin-top-big AddUser_form_section AddUser_form_section_2">
+    <div class="table__content">
+      &nbsp;
+      <table class="table">
+        <tr class="table_row table_heading_row">
+          <th class="table__heading">#</th>
+          <th class="table__heading">Lead Id</th>
+          <th class="table__heading">Name</th>
+          <th class="table__heading">Mobile</th>
+          <th class="table__heading">Email Id</th>
+          <th class="table__heading">Location</th>
+          <th class="table__heading">Added On</th>
+          <th class="table__heading">Added By</th>
+          <th class="table__heading">Action</th>
+        </tr>
+
+        <tr class="table_row" *ngFor="let j of list">
+          <td class="table_col" *ngFor="let i of j">
+            <a
+              [routerLink]="'/Followupview'"
+              *ngIf="i == 'rokit' || i == 'arjun'; else table"
+              >{{ i }}</a
+            >
+            <ng-template #table>
+              {{ i }}
+            </ng-template>
+          </td>
+
+          <!-- <td class="table_col">{{ j }}</td> -->
+          <td class="table_col" (click)="BackDropFunction(j)">
+            <i class="fa fa-bolt leadlist_action" aria-hidden="true"></i>
+          </td>
+        </tr>
+        <!-- <p *ngFor="let j of list">{{ j }}</p> -->
+        <!-- 
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">ROKIT BOLT</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr>
+
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">ARJU RAHUL SOUNDER</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">ROHITH.H.2017.EEE.GMAIL.COM</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr>
+
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr>
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr>
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr>
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr>
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr>
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr>
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr>
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr>
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr>
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr>
+      <tr class="table_row">
+        <td class="table_col">1</td>
+
+        <td class="table_col">4579</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+        <td class="table_col">Hello</td>
+      </tr> -->
+      </table>
+    </div>
+
+    <div class="follow_up_pagination">
+      <div>
+        <a href="#" class="follow_up_pagination__links">Pervious</a>
+        <a href="#" class="follow_up_pagination__links">1</a>
+        <a href="#" class="follow_up_pagination__links">2</a>
+        <a href="#" class="follow_up_pagination__links">3</a>
+        <a href="#" class="follow_up_pagination__links">4</a>
+        <a href="#" class="follow_up_pagination__links">Next</a>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,202 @@
+.follow_up_pagination__links {
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+  color: #007bff;
+  background-color: #fff;
+}
+
+.followup__backdrop {
+  position: absolute;
+  z-index: 555555;
+  max-width: 79%;
+  left: 10%;
+  border: 1px solid;
+  top: 0%;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/*
+.followup__backdrop{
+    
+    margin: 100px auto;
+    border: 1px solid black;
+    padding: 50px;
+    
+}
+
+
+
+.lead_name{
+    
+    text-align: center;
+    font-size: 16px;
+    
+    
+}
+
+.lead_contact_icon{
+    
+    
+    font-size: 30px;
+    
+    
+}
+
+
+.lead_contact_icon_1{
+    
+    color: limegreen;
+    margin-right: 10px;
+    
+}
+
+.lead_contact_icon_2{
+    
+    color: blue;
+    font-size: 25px;
+    
+}
+
+.lead__details__content{
+    
+    display: flex;
+    
+    
+}
+
+.des-co1-of-2-right{
+    
+    margin-left: 20px;
+    
+}
+*/
+.table__content {
+  max-height: 55vh;
+  overflow-y: auto;
+}
+
+.col-1-of-2-new {
+  /* //background-color: red; */
+  max-width: 38%;
+
+  box-shadow: 5px 10px 8px #888888;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  margin-left: 10px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.one {
+  width: 5%;
+  text-align: center;
+}
+
+.two {
+  text-align: center;
+  margin-left: 10px;
+}
+
+.three {
+  width: 50%;
+  text-align: left;
+  margin-left: 10px;
+  word-break: break-all;
+}
+
+.dd {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.follow__up_details {
+  margin-top: 20px;
+}
+
+.col-1-of-2_new {
+  margin-left: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  /* background: red; */
+  width: 55%;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.follow_up_left {
+  margin-left: 10px;
+}
+
+.follow_up_container {
+  margin-left: 10px;
+}
+
+.follow_new_leads_link {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.follow_up_product__listing {
+  margin-top: 10px;
+  display: flex;
+}
+
+.follow_up_text {
+  text-align: center;
+  margin-left: 10px;
+}
+.lead_name {
+  text-align: center;
+  font-size: 16px;
+}
+
+.lead_contact_icon {
+  font-size: 30px;
+}
+
+.lead_contact_icon_1 {
+  color: limegreen;
+  margin-right: 10px;
+}
+
+.lead_contact_icon_2 {
+  color: blue;
+  font-size: 25px;
+}
+
+.lead__details__content {
+  display: flex;
+}
+
+.des-co1-of-2-right {
+  margin-left: 20px;
+}
+
+.backdrop {
+  background: rgba(0, 0, 0, 0.75);
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+.followup__backdrop__close {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.row_follow_up {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.follow_up_product {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.leadlist_action {
+  color: #e7c209;
+}

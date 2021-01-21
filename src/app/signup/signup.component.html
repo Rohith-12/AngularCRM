@@ -1,0 +1,349 @@
+<header class="header">
+      
+         
+    <div class="header__box">
+      
+      
+      <div class="header__logo">
+      <img src='../../assets//img/logo (1).png' class="header__logo__img">
+      </div>
+          <div class="header__indicator">
+
+<p class="gobal__para header__font">Already Registered?
+<a [routerLink]="'Login'" class="links__content header__link">Login here</a>
+
+</p>
+</div>
+
+  </div>
+      
+           
+  </header>
+  
+  
+  <section class="SignUp__form__main">
+      
+      <div class="SignUp__form__container">
+        
+        <h1 class="SignUp__form__primary_heading">Start with your  account today.</h1>
+
+     <form #Form="ngForm" (ngSubmit)="SignUpsubmit(Form)"> 
+     <div class="SignUp__form__input__container">
+         
+         
+         <div class="SignUp__form__input__block">
+             
+             <input type="text" name="first_name"  class="SignUp__form__input"  placeholder="FirstName" required
+             ngModel
+             #Firstname="ngModel" 
+              [ngClass]="{
+                error_border:
+                  (!Firstname.valid && Firstname.touched) ||
+                  (Form.submitted && !Form.valid && !Firstname.valid)
+              }"/>
+              <div
+        class="form__error"
+        *ngIf="
+          (!Firstname.valid && Firstname.touched) ||
+          (Form.submitted && !Form.valid && !Firstname.valid)
+        "
+      >
+        Please specific the Firstname
+      </div>
+             
+             
+         </div>
+
+
+         <div class="SignUp__form__input__block">
+             
+          <input type="text" name="last_name"  class="SignUp__form__input"  placeholder="LastName" required
+          ngModel
+          #Lastname="ngModel" 
+           [ngClass]="{
+             error_border:
+               (!Lastname.valid && Lastname.touched) ||
+               (Form.submitted && !Form.valid && !Lastname.valid)
+           }"/>
+           <div
+     class="form__error"
+     *ngIf="
+       (!Lastname.valid && Lastname.touched) ||
+       (Form.submitted && !Form.valid && !Lastname.valid)
+     "
+   >
+     Please specific the Lastname
+   </div>
+          
+          
+      </div>
+
+         
+           <div class="SignUp__form__input__block">
+             
+             <input type="text" name="email_id"  class="SignUp__form__input"  placeholder="Email"  ngModel
+             #email="ngModel"
+             required
+             email
+             [ngClass]="{
+               error_border:
+                 (!email.valid && email.touched) ||
+                 (Form.submitted && !email.valid)
+             }"/>
+             
+             <div
+        class="form__error"
+        *ngIf="
+          (!email.valid && email.touched) ||
+          (Form.submitted && !Form.valid && !email.valid)
+        "
+      >
+        Please specific the email
+      </div>
+             
+         </div>
+
+
+
+         <div class="SignUp__form__input__block">
+             
+          <input type="text" name="alternate_email"  class="SignUp__form__input"  placeholder="AlternateEmail"  ngModel
+          #Altemail="ngModel"
+          required
+          email
+          [ngClass]="{
+            error_border:
+              (!Altemail.valid && Altemail.touched) ||
+              (Form.submitted && !Altemail.valid)
+          }"/>
+          
+          <div
+     class="form__error"
+     *ngIf="
+       (!Altemail.valid && Altemail.touched) ||
+       (Form.submitted &&  !Altemail.valid)
+     "
+   >
+     Please specific the Alternateemail
+   </div>
+          
+      </div>
+
+
+         <div class="SignUp__form__input__block">
+             
+          <input type="text" name="mobile_number"  class="SignUp__form__input"  placeholder="MobileNumber"  ngModel
+          #MobileNumber="ngModel"
+          required
+         
+          [ngClass]="{
+            error_border:
+              (!MobileNumber.valid && MobileNumber.touched) ||
+              (Form.submitted && !MobileNumber.valid)
+          }"/>
+          
+          <div
+     class="form__error"
+     *ngIf="
+       (!MobileNumber.valid && MobileNumber.touched) ||
+       (Form.submitted && !MobileNumber.valid)
+     "
+   >
+     Pls specific the Mobile Number 
+   </div>
+   <div class="form__error" *ngIf="mobilebool">
+    the length should be greter than 9
+  </div>
+  <div class="form__error" *ngIf="MobileSpecial">
+    Sholud not contian special character
+  </div>
+      </div>
+
+
+      <div class="SignUp__form__input__block">
+             
+        <input type="text" name="alternate_mobile_number"  class="SignUp__form__input"  placeholder="AlternateMobileNumber"  ngModel
+        #AltMobile="ngModel"
+        required
+      
+        [ngClass]="{
+          error_border:
+            (!AltMobile.valid && AltMobile.touched) ||
+            (Form.submitted && !AltMobile.valid)
+        }"/>
+        
+        <div
+   class="form__error"
+   *ngIf="
+     (!AltMobile.valid && AltMobile.touched) ||
+     (Form.submitted && !AltMobile.valid)
+   "
+ >
+   Please specific the Alternate mobilenumber
+ </div>
+        
+    </div>
+
+    <div class="SignUp__form__input__block">
+             
+    <!-- <input type="text" name="AlternatemobileNumber"  class="SignUp__form__input"  placeholder="AlternateMobileNumber"  ngModel
+      #AltMobile="ngModel"
+      required
+    
+      [ngClass]="{
+        error_border:
+          (!AltMobile.valid && AltMobile.touched) ||
+          (Form.submitted && !AltMobile.valid)
+      }"/>
+       -->
+
+<select class="select__user__gender SignUp__form__input" name="gender" ngModel>
+
+
+<option>
+Select Gender
+</option>
+
+<option value="
+Male"> 
+
+Male
+  
+</option>
+
+<option value="Female">
+
+  Female 
+
+</option>
+
+<option value="Others">
+
+Others
+  
+</option>
+
+</select>
+
+<!-- 
+      <div
+ class="form__error"
+ *ngIf="
+   (!AltMobile.valid && AltMobile.touched) ||
+   (Form.submitted && !AltMobile.valid)
+ "
+> 
+ Please specific the Alternate mobilenumber
+</div> -->
+      
+  </div>
+
+         
+         <div class="form__password_group">
+        
+         
+           <div class="SignUp__form__input__block">
+             
+             <input type="password" name="password" 
+              class="SignUp__form__input" 
+               placeholder="password" 
+               ngModel
+                #pass="ngModel"
+                required 
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" 
+               
+          
+                [ngClass]="{
+              error_border:
+                (pass.errors?.required && pass.touched) ||
+                (Form.submitted && !pass.valid) 
+               
+            }"/>
+            <!-- (conformpass.touched && !conformpass.valid)
+            (change)="conformpass.control.updateValueAndValidity()" -->
+            <div
+            class="form__error"
+            *ngIf="
+              (pass.errors?.required && pass.touched) ||
+              (Form.submitted && !Form.valid && !pass.valid)
+            "
+          >
+            Please specific the Password
+          </div>
+          <div
+          class="form__error"
+          *ngIf="
+           pass.touched && pass.errors?.pattern 
+          "
+        >
+          password strength is low
+        </div>
+           
+         </div>
+         
+         
+        
+          <!-- <div class="SignUp__form__input__block">
+             
+             <input type="password" name="conformpassword" appCheckPassword="password" class="SignUp__form__input" 
+              placeholder="confirmpassword" 
+              ngModel 
+              #conformpass="ngModel"
+               required
+               [ngClass]="{
+                error_border:
+                  (!conformpass.valid && conformpass.touched) ||
+                  (Form.submitted && !conformpass.valid)
+                 
+              }"
+             
+             
+             />
+             <div
+        class="form__error"
+        *ngIf="
+          (!conformpass.dirty && conformpass.touched ) ||
+          (Form.submitted  && !conformpass.valid) 
+        "
+      >
+        Please specific the confirmpassword
+      </div>
+          
+             
+         </div> -->
+
+
+
+
+        </div>
+        
+         <!-- <div class="form__error" *ngIf="conformpass.touched && conformpass.errors?.notEqual && !conformpass.errors?.required">
+
+          password and confirm password doesnt match 
+          
+                   </div>  -->
+
+            
+    
+               <div class="SignUp__form__input__block">
+             
+            <button type="submit" class="SignUp__form__submit__bttn">SignUp</button>
+             
+             
+             
+         </div>
+         
+         
+         
+         
+         
+     </div>
+     
+    </form>
+     
+     
+     
+      </div>
+      
+  </section>
+  

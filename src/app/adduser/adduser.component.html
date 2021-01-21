@@ -1,0 +1,163 @@
+<app-header></app-header>
+<div class="wrapper">
+  &nbsp;
+  <section class="u-margin-top-big AddUser_form_section">
+    <form class="form" #Form="ngForm" (ngSubmit)="onSub(Form)">
+      <div class="AddUser_form_row u-margin-top-small">
+        <label class="Adduser_form_label u-margin-right-small"
+          >FullName<span class="AddUser_form_mark">*</span></label
+        >
+
+        <div class="Adduser_form_inputelement">
+          <input
+            type="text"
+            name="UserName"
+            class="Adduser_form_input"
+            placeholder="Enter The FullName"
+            required
+            ngModel
+            #name="ngModel"
+            [ngClass]="{
+              error_border:
+                (!name.valid && name.touched) ||
+                (Form.submitted && !Form.valid && !name.valid)
+            }"
+          />
+        </div>
+      </div>
+      <div
+        class="form__error"
+        *ngIf="
+          (!name.valid && name.touched) ||
+          (Form.submitted && !Form.valid && !name.valid)
+        "
+      >
+        Pls specific the username
+      </div>
+      <div class="AddUser_form_row u-margin-top-small">
+        <label class="Adduser_form_label u-margin-right-small"
+          >Mobile Number<span class="AddUser_form_mark">*</span></label
+        >
+
+        <div class="Adduser_form_inputelement">
+          <input
+            type="text"
+            name="Mobile"
+            class="Adduser_form_input"
+            placeholder="Enter The Mobile Number"
+            ngModel
+            #Mobile="ngModel"
+            required
+            [ngClass]="{
+              error_border:
+                (!Mobile.valid && Mobile.touched) ||
+                (Form.submitted && !Mobile.valid) ||
+                mobilebool
+            }"
+          />
+        </div>
+      </div>
+      <div
+        class="form__error"
+        *ngIf="
+          (!Mobile.valid && Mobile.touched) || (Form.submitted && !Mobile.valid)
+        "
+      >
+        Pls specific the mobile number
+      </div>
+      <div class="form__error" *ngIf="mobilebool">
+        the length should be greter than 9
+      </div>
+      <div class="form__error" *ngIf="MobileSpecial">
+        Sholud not contian special character
+      </div>
+      <div class="AddUser_form_row u-margin-top-small">
+        <label class="Adduser_form_label u-margin-right-small"
+          >Email id<span class="AddUser_form_mark">*</span></label
+        >
+
+        <div class="Adduser_form_inputelement">
+          <input
+            type="text"
+            name="email"
+            class="Adduser_form_input"
+            placeholder="Enter The Email"
+            ngModel
+            #email="ngModel"
+            required
+            email
+            [ngClass]="{
+              error_border:
+                (!email.valid && email.touched) ||
+                (Form.submitted && !email.valid)
+            }"
+          />
+        </div>
+      </div>
+
+      <div
+        class="form__error"
+        *ngIf="
+          (!email.valid && email.touched) || (Form.submitted && !email.valid)
+        "
+      >
+        Pls specific the email
+      </div>
+
+      <div class="form__error" *ngIf="emailerr">enter email correctly</div>
+
+      <div class="AddUser_form_row u-margin-top-small">
+        <label class="Adduser_form_label u-margin-right-small"
+          >Privilege<span class="AddUser_form_mark">*</span></label
+        >
+
+        <div class="Adduser_form_inputelement">
+          <input
+            class=""
+            type="radio"
+            id="Allleads"
+            value="Allleads"
+            name="leads"
+          />
+          <label for="Allleads">Allleads</label>
+          <input
+            class=""
+            type="radio"
+            id="Assignedleads"
+            value="Assignedleads"
+            name="leads"
+          />
+          <label for="Assignedleads">Assignedleads</label>
+
+          <div class="AddUser_form_manage_options u-margin-top-small">
+            <input class="" type="checkbox" id="Managefoleads" />
+            <label for="Managefoleads">ManageLeadsAction</label>
+
+            <input class="" type="checkbox" id="AllowFollowUp" />
+            <label for="AllowFollowUp">Allow Follow Up</label>
+          </div>
+
+          <div class="AddUser_form_manage_options u-margin-top-small">
+            <input class="" type="checkbox" id="Utilities" />
+            <label for="Utilities">Manger</label>
+
+            <input class="" type="checkbox" id="Settings" />
+            <label for="Settings">Placement Officer</label>
+
+            <input class="" type="checkbox" id="Reports" />
+            <label for="Reports">Sales</label>
+
+            <input class="" type="checkbox" id="Reassign" />
+            <label for="Reassign">Reassign</label>
+          </div>
+
+          <div class="AddUser_form_manage_options u-margin-top-small">
+            <div class="AddUser_form_submit_container">
+              <button class="AddUser_form_submit" type="submit">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+</div>
